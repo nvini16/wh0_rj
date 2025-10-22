@@ -1,0 +1,91 @@
+:root {
+    --background-color: linear-gradient(to right,#000000, #02192c, #179aa3);
+    --color: #179aa3;
+    --border-bottom: 2px solid #179aa3;
+    --border-top: 2px solid #02192c;
+    --main: #02192c;
+    --border: solid #179aa3 2px;
+    --box-shadow: 3px 3px 5px #179aa3;
+    --background-color2: linear-gradient(to right,#02192c, #000000);
+    --color-a: #00d9ff;
+}
+
+* {
+    
+    background-color: var(--main);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: var(--color);
+    background: var(--background-color);
+    border-radius: 30px;
+}
+
+
+    body {
+        margin: 2px;
+        }
+        
+
+
+
+header {
+    background-color: var(--main);
+    border-bottom: var(--border-bottom);
+}
+
+main {
+    background-color: var(--main);
+    border-radius: 50px;
+    margin: auto;
+}
+
+footer {
+    border-top: var(--border-top);
+}
+
+
+
+.box {
+    border: var(--border);
+    padding: 9px;
+    margin: 34px;
+    border-radius: 20px;
+    background-color: var(--background-color2);
+    box-shadow: var(--box-shadow);
+}
+    
+    .box:hover {
+    transform: scale(1.1);
+    
+}
+
+a {
+    color: var(--color);
+    border-radius: 30px;
+    padding-left: 30px;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-a)
+}
+
+.busca {
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    display: flex;
+    
+}
+
+p {
+    text-align: justify;
+    color: var(--color);
+}
+
+p:hover {
+    color: var(--color-a);
+}
+
+.line {
+    border-top: var(--border);
+}
