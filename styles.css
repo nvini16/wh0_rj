@@ -46,7 +46,7 @@ footer {
 
 .box {
     border: var(--border);
-    padding: 9px;
+    padding: 10px;
     margin: 34px;
     border-radius: 20px;
     background-color: var(--background-color2);
@@ -82,10 +82,23 @@ p {
     color: var(--color);
 }
 
+.p {
+    border-top: var(--border-bottom) ;
+    padding: 9px;
+}
+
 p:hover {
     color: var(--color-a);
 }
 
 .line {
     border-top: var(--border);
+}
+
+.art {
+    text-align: center;
+}
+
+li:hover {
+    color: var(--color-a);
 }
