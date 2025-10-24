@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos</title>
+    <link rel="stylesheet" href="styles.css"
+</head>
+<body>
+        <header>
+        <h1>Manual do programador web</h1>
+        <p>Bem-Vindo ao espaço de aprendizado - Curso HTML, CSS, JS.</p>
+
+        <ul class="busca">
+            <li><a href="#elementos">Elementos</a></li>
+            <li><a href="#atributos">Atributos</a></li>
+            <li><a href="#complementacao">Complementação</a></li>
+            <li><a href="#exercicios">Exercícios</a></li>
+            <li></li>
+        </ul>
+    </header>
+    <main>
+                <div class="box" >
+            <section class="p">
+                <summary>HTML — A Estrutura da Web</summary>
+            </section>
+
+            <p><strong>O que é HTML?..</strong></p>
+
+            <p>HTML (HiperText Markup Language, ou Linguagem de Marcação de Hipertexto) é a base strutural de toda a página da web.<br> Ele não é uma linguagem de programação, mas sim uma linguagem de Marcação, usada para organizar, hierarquizar e descrever o conteúdo que será exibido no navegador.<br><br> Tudo o que você vê em um site — textos, títulos, imagens, links, botões — nasce do HTML.<br><br> Ele é o esqueleto da página, que depois será estilizado com CSS e tornado dinâmico com JavaScript.</p>
+
+            <details>
+                <summary>Como ele funciona</summary>
+
+                <p>O HTML organiza o conteúdo em elementos, chamados tags.<br> Cada elemento tem uma função específica e uma sintaxe própria:</p>
+
+                <div>
+                    <p>&ltp&gtHTML:&ltbr&gt&ltbr&gt &lttag&gtatributo="valor"conteúdo&lt/tag&gt&lt/p&gt<br><br><strong>Saída:</strong>"valor"</p>
+
+                  <p>&ltp&gtPor exemplo:&ltbr&gt&ltbr&gt&ltp&gtEste é um parágrafo de texto.&lt/p&gt&lt/p&gt<br><br><strong>Saída:</strong>Este é um parágrafo texto.</p>
+
+
+
+                    <p>O navegador lê essas marcações e entende compo deve mostrar o conteúdo ao usuário</p>
+                </div>
+
+                <h2>Estrutura básica de um docuento HTML</h2>
+                <p>Todo arquivo HTML segue uma estrutura padrão, que indica ao navegador como interpretar o conteúdo:</p>
+
+                <div>
+                    <p>
+                            &lt!DOCTYPE html&gt
+&lthtml lang="pt-BR"&gt<br>
+  &lthead&gt<br>
+    &ltmeta charset="UTF-8"&gt<br>
+    &ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt<br>
+    &lttitle&gtMeu Primeiro Site&lt/title&gt<br>
+  &lt/head&gt<br><br>
+
+  &ltbody&gt<br>
+    &lth1&gtOlá, mundo!&lt/h1&gt<br>
+    &ltp&gtEste é o meu primeiro parágrafo em HTML.&lt/p&gt<br>
+  &lt/body&gt<br>
+&lt/html&gt<br>
+                    </p>
+                    
+                    <h3>Explicando por parte:</h3>
+
+                    <nav>
+                        <ul>
+                            <li>&lt!DOCTYPE html&gt -> informa ao navegador que o documento usa HTML5.</li>
+                            <li>&lthtml&gt -> elemento raiz da página</li>
+                            <li>&lthead&gt -> contém metadados (informações sobre o site, e não o conteúdo em si).</li>
+                            <li>&ltmeta charset="UTF-8"&gt -> define o conjunto de caracteres (permite acentos e cedilhas).</li>
+                            <li>&lttitle&gt -> título exibido na aba do navegador.</li>
+                            <li>&ltbody&gt -> contém todo o conteúdo visível de uma página.</li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <h2>Conceito fundamental: hierarquia</h2>
+
+                <p>O HTML é hierarquico, ou seja, um elemento pode conter outros dentro dele. <br> Isso cria blocos lógicos que o navegador e o CSS conseguem manipular facilmente.<br><br> Exmplo:</p>
+
+                <P>
+                    &ltsection&gt<br>
+                    &lth2&gtSobre mim&lt/h2&gt<br>
+                    &ltp&gtSou um progrador em aprendizado constante.&lt/p&gt<br>
+                    &lt/section&gt
+                </P>
+            </details>
+
+        </div>
+
+        <div class="p" id="elementos">
+            <h2>Elementos</h2>
+            <p>Um elemnto HTML é a unidade fundamental de uma página web.<br> Ele representa um comportamento da estrutura (como um título, parágrafo, link, imagem, botão...) e é interpretado pelo navegador para exibir o conteúdo de forma adequada.</p>
+
+            <h3>Estrutura básica de um elemnto</h3>
+            <p>Um elemnto HTML é composto, geralmente, por três partes:</p>
+
+            <p>&lttag-de-abertura&gtconteúdo&lt/tag-de-fechamento&gt</p>
+
+            <p>EX.:</p>
+            <p>&ltp&gtEste é um parágrafo.&lt/p&gt</p>
+            <nav>
+                <ul>
+                    <li><strong>&ltp&gt:</strong>Tag de abertura (indica o início de elemnto).</li>
+                    <li><strong>&lt/p&gt:</strong>Tag de fechamento (indica o fim do elemnto).</li>
+                    <li><strong>este é um parágrafo.:</strong>Conteúdo exibido na página.</li>
+                </ul>
+            </nav>
+
+            <p><strong>Elentos com e sem conteúdo</strong></p>
+            <nav>
+                <ol>
+                    <li>
+                        <p><strong>Elemntos com conteúdo (com tag de fechamneto)</strong><br>São aqueles que possuem um conteúdo entre as tags.</p>
+
+                        <p>EX.:</p>
+                        <p>&lth1&gtTítulo principal&lt/h1&gt<br>&ltp&gtTexto do parágrafo.&lt/p&gt<br>&lta href="#"&gtLink&lt/a&gt</p>
+                    </li>
+
+                    <li>
+                        <p><strong>Elemntos vazios (sem tag de fechamneto)</strong><br>também chamados de elemntos autoencerráveis, não possuem conteúdo inteiro.</p>
+
+                        <p>EX.:</p>
+                        <p>&ltimg src="foto.jpg" alt="Foto de exemplo"&gt<br>&ltbr&gt<br>&lthr&gt<br>&ltinput type="text"&gt</p>
+                        <p><em>Observações:<br>em HTML5, não é obrigatorio usar a barra final (/&gt), mas ela é aceita por compatibilidade com XHTML, por exemplo:<br><br>
+                        <p>&ltimg src="foto.jpg" alt="foto" /&gt</p></em></p>
+                    </li>
+                </ol>
+            </nav>
+
+            <h3>Elentos aninhados (Nesting)</h3>
+            <p>Um elemnto pode conter outros elemntos dentro dele, criando hierarquias.</p>
+
+            <p>EX.:</p>
+            <p>&ltdiv&gt<br>&lth2&gtTítulo interno&lt/h2&gt<br>&ltp&gtTexto dentro da visão.&lt/p&gt<br>&lt/div&gt</p>
+            <p>Aqui:</p>
+
+            <nav>
+                <ul>
+                    <li><strong>&ltdiv&gt:</strong>é o elemnto pai.</li>
+                    <li><strong>&lth2&gt</strong> e <strong>&ltp&gt</strong>são filhos de <strong>&ltdiv&gt</strong></li>
+                </ul>
+            </nav>
+            <em>Importante:<br><p>Sempre feche as tags na ordem inversa à que foram abertas, para evitar erros de estrutura.</p></em>
+
+            <h3>Tipos de elemntos HTML</h3>
+            <p>Os elementos podem ser classificados segundo seu comportamneto visual e estrutural:</p>
+
+            <div class="table">
+                <section>
+                    <table border="1">
+                        <tr>
+                            <th>Tipo</th>
+                            <th>Descrição</th>
+                            <th>Exemplos</th>
+                        </tr>
+                        <tr>
+                            <td>Bloco (block-level)</td>
+                            <td>Ocupe toda a largura disponível e começa em uma nova linha.</td>
+                            <td>&ltdiv&gt, &ltp&gt, &lth1&gt-&lth6&gt, &ltul&gt, &ltsection&gt</td>
+                        </tr>
+                        <tr>
+                            <td>inline</td>
+                            <td>Ocupe apenas o espaço necessário ao seu conteúdo, sem quebrar linha.</td>
+                            <td>&ltspan&gt, &lta&gt, &ltstrong&gt, &ltem&gt, &ltimg&gt</td>
+                        </tr>
+                        <tr>
+                            <td>inline-block</td>
+                            <td>Compota-se como inline, mas permite definir largura e altura.</td>
+                            <td>&ltbutton&gt, &ltinput&gt, 7ltselect&gt</td>
+                        </tr>
+                    </table>
+                </section>
+            </div>
+
+            <h3>Semântica de elemntos</h3>
+            <p>A partir do HTML5, os elemntos passaram a ter funções semânticas, ou seja, informam o propósito do conteúdo para o navegador e macanismo de busca.</p>
+
+            <p>EX.:</p>
+            <p>&ltheadre&gtTopo da página&lt/header&gt<br>&ltmain&gtConteúdo principal&lt/main&gt<br>
+            &ltfooter&gtRodapé&lt/footer&gt</p>
+            <p>Esses elemntos substituem o uso genérico de &ltdiv&gt e ajudam na organização e acessibilidade da página.</p>
+
+                    <div class="table">
+            <section>
+                <summary>Tipos principais de elemnetos</summary>
+
+                <table border="1">
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Exemplo</th>
+                        <th>função</th>
+                    </tr>
+                    <tr>
+                        <td>Estruturais</td>
+                        <td>&ltheader&gt, &ltmain&gt, &ltfooter&gt</td>
+                        <td>Oragnizam o layout da página</td>
+                    </tr>
+                    <tr>
+                        <td>Textuais</td>
+                        <td>&lth1&gt, &ltp&gt, &ltstrong&gt, &ltem&gt</td>
+                        <td>Criam e formatão textos</td>
+                    </tr>
+                    <tr>
+                        <td>Mídia</td>
+                        <td>&ltimg&gt, &ltvideo&gt, &ltaudio&gt</td>
+                        <td>Inserem imagens, videos e sons</td>
+                    </tr>
+                    <tr>
+                        <td>Navegação</td>
+                        <td>&lta&gt, &ltnav&gt</td>
+                        <td>Criam links e menus</td>
+                    </tr>
+                    <tr>
+                        <td>Formulários</td>
+                        <td>&ltform&gt, &ltinput&gt, &ltlabel&gt, &ltbutton&gt</td>
+                        <td>Capturam dados do usuário</td>
+                    </tr>
+                </table>
+
+
+            </section>
+        </div>
+        </div>
+
+        <div class="p">
+                    <div class="box" id="atributos">
+            <section class="p">
+                <h2>Atributos</h2>
+
+                <p>Os atributos são informações adicionais dentro de uma tag HTML.<br> Eles modoficam o comportamento ou definem propriedades de um elemento. São sempre escritos dentro de uma tag de abertura.<br><br> A sintaxe geral é:</p>
+
+                <P>&lttag atributo="valor"&gtconteúdo&lt/tag&gt</P>
+
+                <p>Por exemplo:<br><br> &ltimg src="foto.jpg" alt="Descrição da foto"&gt</p>
+
+                <p>Um atributo é composto por duas partes:</p>
+                <ol>
+                    <li><strong>Nome do atributo</strong>> indica o tipo de informasções (ex.: src, href, class, id).</li><br>
+                    <li><strong>Valor do atributo</strong>> define o conteúdo ou a configuração desse atributo (ex.:"foto.jpg", "texto", "prncipal").</li>
+                </ol>
+
+                <p>Aqui:<br><br> 
+                
+                    <nav>
+                        <ul>
+                            <li><strong>src</strong> > atributo que indica o caminho da imagem.</li>
+                            <li><strong>alt</strong> > Atributo que fornece um texto alternativo, caso a imagem não carregue.</li>
+                        </ul>
+                    </nav><br>
+
+                    <h4>Exemplo prático</h4>
+
+                    <p>&ltimg src="foto.jpg" alt="Descrição da foto"&gt</p>
+
+                    <p>Aqui, o elemento &ltimg&gt usa dois atributos:<br><br>
+
+                        <strong>src="foto.jpg"</strong> indica onde a imagem está armazenada.<br><br>
+
+                        <strong>alt="Descrição da foto"</strong> fornece um texto alternativo, caso a imagem não carregue.
+                
+                </p>
+
+                <h2>Tipos de atributos</h2>
+                <p>Podem ser usados em qualquer tag.</p>
+                <p>EX.:</p>
+
+                <nav>
+                    <ul>
+                        <li><strong>id:</strong>indentifica de forma única um elemnto na página.</li>
+                        <li><strong>class:</strong>agrupa elemntos que compartilham o memso estilo ou comportamneto.</li>
+                        <li><strong>style:</strong>aplica estilos CSS diretamnete no elemnto.</li>
+                        <li><strong>title:</strong>adiciona uma dica (tooltip) exibida ao passar o mouse.</li>
+                    </ul>
+                </nav><br>
+
+                <p>&ltp id="descricao" class="texto" title="texto informativo"&gtConteúdo do parágrafo&lt/p&gt</p>
+
+                <h2>Atributos específicos</h2>
+                <p>São usados apenas em determinadas tags e definem comportamentos próprios.</p>
+                <p>EX.:</p>
+
+                <nav>
+                    <ul>
+                        <li><strong>href</strong>(em <strong>&lta&gt</strong>): define o link de destino.</li>
+                        <li><strong>src</strong>(em <strong>&ltimg&gt</strong>): define o caminho de um arquivo externo.</li>
+                        <li><strong>type</strong>(em <strong>&ltinput&gt</strong> ou <strong>&ltbutton&gt</strong>): especifica o tipo do elemnto.</li>
+                        <li><strong>value</strong>(em <strong>&ltinput&gt</strong>): define o valor inicial do campo.</li>
+                    </ul>
+                </nav>
+
+                <p>&lta href="https://www.exemplo.com"&gtVisite o site&lt/a&gt<br>&ltinput type="text" value="Digite aqui"&gt</p>
+                <p><strong>Boas práticas ao usar atributos</strong></p>
+
+                <nav>
+                    <ul>
+                        <li>Sempre coloque os valores entre aspas duplas (""), mesmo que não sejam obrigatórias.</li>
+                        <li>Evite usar o mesmo id em mais um elemnto.</li>
+                        <li>Use <strong>class</strong> para aplicar estilos em grupo e <strong>id</strong> apenas quando precisar indentificar algo único.</li>
+                        <li>Prefira atributos semânticos e padronizados, evitando nomes inventados (a não ser em data attributes).</li>
+                    </ul>
+                </nav>
+
+                <p><strong>Atributos personalizados (data-attributes)</strong></p>
+                <p>O HTML5 introduziu os atributos personalizados que começam com <strong>data-.</strong><br>Eles permitem armazenar informações extras em elemntos, acessíveis via javaScript.</p>
+
+                <p>EX.:</p>
+
+                <p>&ltdiv data-user="nome" data-role="admin"&gtinformações do usuário&lt/div&gt</p>
+
+                <p>Esses dados podem ser manipulados em javaScript:</p>
+
+                <p>let user = document.querySelector('div').dataset.user; <em>// "nome"</em></p>
+            </section>
+
+
+ 
+            <section>
+                <h2>Tipos de atributos</h2>
+                <p>Podem ser usados em qualquer elemnto HTML.<br> Exemplos principais:</p>
+
+                <table border="1">
+                    <tr>
+                        <th>Atributo</th>
+                        <th>função</th>
+                        <th>Exemplo</th>
+                    </tr>
+                    <tr>
+                        <td>id</td>
+                        <td>Identificador único (usado em CSS e JS)</td>
+                        <td>&ltp id="intro"&gt...&lt/p&gt</td>
+                    </tr>
+                    <tr>
+                        <td>class</td>
+                        <td>Agrupa elemntos semelhantes</td>
+                        <td>&ltdiv class="caixa"&gt&lt/div&gt</td>
+                    </tr>
+                    <tr>
+                        <td>title</td>
+                        <td>Texto exibido ao passar o mouse</td>
+                        <td>&ltbutton title="clique aqui"&gtok&lt/button&gt</td>
+                    </tr>
+                    <tr>
+                        <td>style</td>
+                        <td>Adiciona estilos diretos (CSS inline)</td>
+                        <td>&ltp style="color: red;"&gtTexto&lt/p&gt</td>
+                    </tr>
+                    <tr>
+                        <td>hidden</td>
+                        <td>Oculta o elemnto</td>
+                        <td>&ltp hidden&gtVocê não é isso&lt/p&gt</td>
+                    </tr>
+                    <tr>
+                        <td>tabindex</td>
+                        <td>Define a ordem de navegação pelo teclado</td>
+                        <td>&ltinput tabindex="1"&gt</td>
+                    </tr>
+                </table>
+            </section>
+        </div>
+        </div>
+
+        <div class="box" id="complementacao">
+            <section class="p">
+                <h2>Complementação</h2>
+                <p>Além dos elementos e atributos básicos, o HTML oferece recursos adicionais para enriquecer a estrutura e funcionalidade das páginas web.</p>
+
+                <h3>Comentários</h3>
+                <p>Os comentários são trechos de texto ignorados pelo navegador.<br> Eles servem para documentar o código, explicar partes complexas ou deixar notas para outros desenvolvedores.</p>
+
+                <p>EX.:</p>
+                <p>&lt!-- Este é um comentário em HTML --&gt</p>
+
+                <h3>Entidades HTML</h3>
+                <p>As entidades HTML são códigos especiais usados para representar caracteres reservados ou símbolos que não podem ser inseridos diretamente no código.</p>
+
+                <p>EX.:</p>
+                <p>&amplt; representa o símbolo &ltbr&gt<br>&ampgt; representa o símbolo &gtbr&gt<br>&ampamp; representa o símbolo &ampbr&gt<br>&ampquot; representa aspas duplas "br&gt<br>&amp#39; representa aspas simples 'br&gt</p>
+
+                <h3>Doctype</h3>
+                <p>A declaração doctype informa ao navegador qual versão do HTML está sendo usada.<br> Em HTML5, a sintaxe é simples:</p>
+
+                <p>EX.:</p>
+                <p>&lt!DOCTYPE html&gt</p>
+            </section>
+        </div>
+    </main>
+
+        <footer class="p">
+        <p>© 2025 — Meu Curso</p>
+
+        <details>
+            <summary>Fontes:</summary>
+        <nav>
+            <ul>
+                <li><a href="https://developer.mozilla.org/pt-BR/">MDN Web Docs (Mozilla)</a></li><br>
+                <li><a href="https://www.w3schools.com/">w3schools</a></li><br>
+                <li><a href="https://www.freecodecamp.org/ptbr/">freecodecamp</a></li><br>
+                <li><a href="https://html.spec.whatwg.org/">HTML Living Standard (Mozilla)</a></li><br>
+                <li><a href="https://css-tricks.com/">css-tricks</a></li><br>
+                <li><a href="https://javascript.info/">JavaScript.info</a></li><br>
+                <li><a href="https://www.software-developer-india.com/why-the-usa-is-the-largest-market-for-software-development/?utm_source=chatgpt.com">Software‑Developer‑India.com — “Why the USA is the largest market for software development”, Mar 2024.</a></li><br>
+            </ul>
+        </nav>
+        </details>
+    </footer>
+</body>
+</html>
