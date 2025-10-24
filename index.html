@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +15,7 @@
         <p>Bem-Vindo ao espaço de aprendizado - Curso HTML, CSS, JS.</p>
 
         <ul class="busca">
-            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="curso.html">Cursos</a></li>
             <li><a href="#artigo">Artigo</a></li>
             <li><a href="#manual">Manual</a></li>
             <li></li>
@@ -177,194 +180,85 @@ Além disso, este material enfatiza a boa organização e a legibilidade do cód
             </section>
         </div>
 
-        <h2 >
-            <p id="manual" class="art">
-                <strong>Manual</strong>
-            </p>
-        </h2>
-
-        <div class="box" >
-            <section class="p">
-                <summary>HTML — A Estrutura da Web</summary>
-            </section>
-
-            <p><strong>O que é HTML?..</strong></p>
-
-            <p>HTML (HiperText Markup Language, ou Linguagem de Marcação de Hipertexto) é a base strutural de toda a página da web.<br> Ele não é uma linguagem de programação, mas sim uma linguagem de Marcação, usada para organizar, hierarquizar e descrever o conteúdo que será exibido no navegador.<br><br> Tudo o que você vê em um site — textos, títulos, imagens, links, botões — nasce do HTML.<br><br> Ele é o esqueleto da página, que depois será estilizado com CSS e tornado dinâmico com JavaScript.</p>
-
-            <details>
-                <summary>Como ele funciona</summary>
-
-                <p>O HTML organiza o conteúdo em elementos, chamados tags.<br> Cada elemento tem uma função específica e uma sintaxe própria:</p>
-
-                <div>
-                    <p>&ltp&gtHTML:&ltbr&gt&ltbr&gt &lttag&gtatributo="valor"conteúdo&lt/tag&gt&lt/p&gt<br><br><strong>Saída:</strong>"valor"</p>
-
-                  <p>&ltp&gtPor exemplo:&ltbr&gt&ltbr&gt&ltp&gtEste é um parágrafo de texto.&lt/p&gt&lt/p&gt<br><br><strong>Saída:</strong>Este é um parágrafo texto.</p>
-
-
-
-                    <p>O navegador lê essas marcações e entende compo deve mostrar o conteúdo ao usuário</p>
-                </div>
-
-                <h2>Estrutura básica de um docuento HTML</h2>
-                <p>Todo arquivo HTML segue uma estrutura padrão, que indica ao navegador como interpretar o conteúdo:</p>
-
-                <div>
-                    <p>
-                            &lt!DOCTYPE html&gt
-&lthtml lang="pt-BR"&gt<br>
-  &lthead&gt<br>
-    &ltmeta charset="UTF-8"&gt<br>
-    &ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt<br>
-    &lttitle&gtMeu Primeiro Site&lt/title&gt<br>
-  &lt/head&gt<br><br>
-
-  &ltbody&gt<br>
-    &lth1&gtOlá, mundo!&lt/h1&gt<br>
-    &ltp&gtEste é o meu primeiro parágrafo em HTML.&lt/p&gt<br>
-  &lt/body&gt<br>
-&lt/html&gt<br>
-                    </p>
-                    
-                    <h3>Explicando por parte:</h3>
-
-                    <nav>
-                        <ul>
-                            <li>&lt!DOCTYPE html&gt -> informa ao navegador que o documento usa HTML5.</li>
-                            <li>&lthtml&gt -> elemento raiz da página</li>
-                            <li>&lthead&gt -> contém metadados (informações sobre o site, e não o conteúdo em si).</li>
-                            <li>&ltmeta charset="UTF-8"&gt -> define o conjunto de caracteres (permite acentos e cedilhas).</li>
-                            <li>&lttitle&gt -> título exibido na aba do navegador.</li>
-                            <li>&ltbody&gt -> contém todo o conteúdo visível de uma página.</li>
-                        </ul>
-                    </nav>
-                </div>
-
-                <h2>Conceito fundamental: hierarquia</h2>
-
-                <p>O HTML é hierarquico, ou seja, um elemento pode conter outros dentro dele. <br> Isso cria blocos lógicos que o navegador e o CSS conseguem manipular facilmente.<br><br> Exmplo:</p>
-
-                <P>
-                    &ltsection&gt<br>
-                    &lth2&gtSobre mim&lt/h2&gt<br>
-                    &ltp&gtSou um progrador em aprendizado constante.&lt/p&gt<br>
-                    &lt/section&gt
-                </P>
-            </details>
-
-        </div>
-
-        <div class="table">
-            <section>
-                <summary>Tipos principais de elemnetos</summary>
-
-                <table border="1">
-                    <tr>
-                        <th>Tipo</th>
-                        <th>Exemplo</th>
-                        <th>função</th>
-                    </tr>
-                    <tr>
-                        <td>Estruturais</td>
-                        <td>&ltheader&gt, &ltmain&gt, &ltfooter&gt</td>
-                        <td>Oragnizam o layout da página</td>
-                    </tr>
-                    <tr>
-                        <td>Textuais</td>
-                        <td>&lth1&gt, &ltp&gt, &ltstrong&gt, &ltem&gt</td>
-                        <td>Criam e formatão textos</td>
-                    </tr>
-                    <tr>
-                        <td>Mídia</td>
-                        <td>&ltimg&gt, &ltvideo&gt, &ltaudio&gt</td>
-                        <td>Inserem imagens, videos e sons</td>
-                    </tr>
-                    <tr>
-                        <td>Navegação</td>
-                        <td>&lta&gt, &ltnav&gt</td>
-                        <td>Criam links e menus</td>
-                    </tr>
-                    <tr>
-                        <td>Formulários</td>
-                        <td>&ltform&gt, &ltinput&gt, &ltlabel&gt, &ltbutton&gt</td>
-                        <td>Capturam dados do usuário</td>
-                    </tr>
-                </table>
-            </section>
-        </div>
-
         <div class="box">
-            <section>
-                <h2>Atributos</h2>
-
-                <p>Os atributos são informações adicionais dentro de uma tag HTML.<br> Eles modoficam o comportamento ou definem propriedades de um elemento.<br><br> A sintaxe geral é:</p>
-
-                <P>&lttag atributo="valor"&gtconteúdo&lt/tag&gt</P>
-
-                <p>Por exemplo:<br><br> &ltimg src="foto.jpg" alt="Descrição da foto"&gt</p>
-
-                <p>Aqui:<br><br> 
-                
-                    <nav>
-                        <ul>
-                            <li><strong>src</strong> > atributo que indica o caminho da imagem.</li>
-                            <li><strong>alt</strong> > Atributo que fornece um texto alternativo, caso a imagem não carregue.</li>
-                        </ul>
-                    </nav>
-                
+            <h2 >
+                <p id="manual" class="art">
+                    <strong>Manual</strong>
                 </p>
-            </section>
-        </div>
-
-        <div class="table">
+            </h2>
             <section>
-                <h2>Tipos de atributos</h2>
-                <p>Podem ser usados em qualquer elemnto HTML.<br> Exemplos principais:</p>
+                <details>
+                    <summary>
+                        <pre><p><strong>Guia prático para iniciantes em programação web:</strong></p></pre>
 
-                <table border="1">
-                    <tr>
-                        <th>Atributo</th>
-                        <th>função</th>
-                        <th>Exemplo</th>
-                    </tr>
-                    <tr>
-                        <td>id</td>
-                        <td>Identificador único (usado em CSS e JS)</td>
-                        <td>&ltp id="intro"&gt...&lt/p&gt</td>
-                    </tr>
-                    <tr>
-                        <td>class</td>
-                        <td>Agrupa elemntos semelhantes</td>
-                        <td>&ltdiv class="caixa"&gt&lt/div&gt</td>
-                    </tr>
-                    <tr>
-                        <td>title</td>
-                        <td>Texto exibido ao passar o mouse</td>
-                        <td>&ltbutton title="clique aqui"&gtok&lt/button&gt</td>
-                    </tr>
-                    <tr>
-                        <td>style</td>
-                        <td>Adiciona estilos diretos (CSS inline)</td>
-                        <td>&ltp style="color: red;"&gtTexto&lt/p&gt</td>
-                    </tr>
-                    <tr>
-                        <td>hidden</td>
-                        <td>Oculta o elemnto</td>
-                        <td>&ltp hidden&gtVocê não é isso&lt/p&gt</td>
-                    </tr>
-                    <tr>
-                        <td>tabindex</td>
-                        <td>Define a ordem de navegação pelo teclado</td>
-                        <td>&ltinput tabindex="1"&gt</td>
-                    </tr>
-                </table>
+                    </summary>
+
+                    <nav>
+                        <ol>
+                            <li><strong>Introdução:</strong></li>
+
+                            <ul><li><p>O que é desenvolvimento web<br><br> O desenvolvimento web é o processo de criação e manutenção de sites, sistemas e aplicações que funcionam na internet. Ele envolve o uso de linguagens, frameworks e tecnologias que permite que uma página seja exibida, interpretada e interaja com o usuário por meio de um navegador.<br><br> <h2><strong>Cliente x Servidor</strong></h2><br>Toda aplicação web funciona através da comunicação entre dois lados:<br><br>
+                            
+                            <nav>
+                                <ul>
+                                    <li><strong>Cliente:</strong>é o navegador do usuário (como o Chrome, Firefox, Edge). Ele envia requisições para o Servidor e exibe o conteúdo recebido.</li>
+                                    <li><strong>Servidor:</strong>é o computador remoto que armazena e processa os dados do site. Ele recebe as aquisições do cliente e responde com arquivos (HTML, CSS, JS, imagens, daos...).</li>
+                                </ul>
+                            </nav><br><br>
+
+
+                            Por exemplo: quando você acessa um site, o navegador (cliente) pede a página ao servidor. O servidor envia os arquivos e o navegador enterpreta tudo, mostrando o site na tela. A interação do usuário (clicar, preencher formulários) também é enviada ao servidor para processar e responder conforme necessário.</p></li></ul>
+
+                            <h2><strong>front-end x Back-end</strong></h2>
+                            Esses dois termos representam as áreas principais do desenvolvimento web:<br><br>
+                             
+                            <nav>
+                                <ul>
+                                    <li><strong>front-end:</strong>é a parte <em>visível</em> do site — o que o usuário vê e com o que enterage.<br>Envolve prinvipalmente <strong>HTML, CSS</strong>e<strong>JavaScript.</strong></li>
+                                    <li><strong>Back-end:</strong>é a parte <em>invisível,</em> responsável por processar dados, autenticar usuários, armazenar informações em bancos de dados e controlar a lógica do sistema. Usa línguagens como <strong>Python, Node.js. java,</strong>entre outras.</li>
+                                </ul>
+                            </nav><br><br>
+
+                            O desenvolvedor que domina as duas áreas é chamado de <strong>full-stack developer</strong>.<br><br>
+
+                            </p></li></ul>
+
+
+                            <li><strong>Entendendo os fundamentos:</strong></li>
+
+                            <ul><li><p>O que é HTML, CSS e JavaScript?</p></li></ul>
+                            <ul><li><p>Como eles trabalham juntos para criar páginas web.</p></li></ul>
+
+                            <li><strong>Configurando o ambiente de desenvolvimento:</strong></li>
+
+                            <ul><li><p>Escolhendo um editor de código (VSCode, Sublime Text, etc.).</p></li></ul>
+                            <ul><li><p>Instalando navegadores modernos para testes (Chrome, Firefox).</p></li></ul>
+
+                            <li><strong>Primeiros passos com HTML:</strong></li>
+
+                            <ul><li><p>Estrutura básica de um documento HTML.</p></li></ul>
+                            <ul><li><p>Elementos comuns: cabeçalhos, parágrafos, links, imagens.</p></li></ul>
+
+                            <li><strong>Estilizando com CSS:</strong></li>
+
+                            <ul><li><p>Seletores, propriedades e valores.</p></li></ul>
+                            <ul><li><p>Box model, cores, fontes e layouts simples.</p></li></ul>
+
+                            <li><strong>Adicionando interatividade com JavaScript:</strong></li>
+
+                            <ul><li><p>Variáveis, funções e eventos básicos.</p></li></ul>
+                            <ul><li><p>Manipulação do DOM para alterar conteúdo dinamicamente.</p></li></ul>
+                        </ol>
+                    </nav>
+
+                </details>
             </section>
-        </div>
+
+
 
     </main>
 
-    <footer>
+    <footer class="p">
         <p>© 2025 — Meu Curso</p>
 
         <details>
@@ -384,4 +278,3 @@ Além disso, este material enfatiza a boa organização e a legibilidade do cód
     </footer>
 </body>
 </html>
-
