@@ -1,3 +1,5 @@
+
+
 :root {
     --background-color: #02192c;
     --color: #179aa3;
@@ -59,10 +61,19 @@ footer {
 a {
     color: var(--color);
     border-radius: 30px;
-    padding-left: 30px;
     text-decoration: none;
 }
 
+.table {
+    text-align: center;
+    padding: 10px;
+    box-shadow: var(--box-shadow);
+    background-color: var(--background-color2);
+    border-radius: 20px;
+    margin: 34px;
+    border: var(--border);
+
+}
 a:hover {
     color: var(--color-a)
 }
@@ -99,9 +110,4 @@ p:hover {
 
 li:hover {
     color: var(--color-a);
-}
-
-.table {
-    text-align: center;
-    padding: 100px;
 }
