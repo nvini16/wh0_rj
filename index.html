@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,17 +7,21 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <header id="topo">
         <h1>Manual do programador web</h1>
         <p>Bem-Vindo ao espaço de aprendizado - Curso HTML, CSS, JS.</p>
-
-        <ul class="busca">
+        
+        <div class="box">
+                    <ul class="busca">
             <li><a href="curso.html">Cursos</a></li>
             <li><a href="#artigo">Artigo</a></li>
             <li><a href="#manual">Manual</a></li>
+            <li><a href="vejatambem.html">Veja também</a></li>
             <li></li>
         </ul>
+        </div>
     </header>
+    <div class="box">
 
     <main>
 
@@ -56,12 +57,15 @@ O objetivo principal deste manual é transformar a teoria em prática, oferecend
 Além disso, este material enfatiza a boa organização e a legibilidade do código, preparando o leitor para trabalhar de forma eficiente e profissional, seja em projetos próprios ou em equipes de desenvolvimento.</p>
 
         </section>
-        </div>
-
-        <h2 class="p">
-            <p id="artigo" class="art">
-                <strong>Artigo</strong>
-            </p>
+    </div>
+    
+    <h2 class="p">
+        <p id="artigo" class="art">
+            <strong>Artigo</strong>
+        </p>
+        <button>
+    <a  href="#topo" style="padding: 0px 25px 0px 25px; margin: 10px 10px; text-align: center; background-color: #02192C;">&#8593</a>
+    </button
         </h2>
 
         <div class="box">
@@ -258,23 +262,9 @@ Além disso, este material enfatiza a boa organização e a legibilidade do cód
 
     </main>
 
-    <footer class="p">
+    <footer class="box">
         <p>© 2025 — Meu Curso</p>
-
-        <details>
-            <summary>Fontes:</summary>
-        <nav>
-            <ul>
-                <li><a href="https://www.chicagofed.org/publications/chicago-fed-insights/2025/analyzing-impact-programming-skills-career-outcomes?utm_source=chatgpt.com">Federal Reserve Bank of Chicago — “Analyzing the Impact of Programming Skills on Career Outcomes of Software Engineers”, Gustavo de Souza & Jack Mannion, 2025.</a></li><br>
-                <li><a href="https://www.brookings.edu/articles/how-ai-powered-software-development-may-affect-labor-markets/?utm_source=chatgpt.com">Brookings Institution — “How AI-powered software development may affect labor markets”, Peter Cihon & Mert Demirer, 2023.</a></li><br>
-                <li><a href="https://www.forbes.com/sites/sylvainduranton/2024/04/15/are-coders-jobs-at-risk-ais-impact-on-the-future-of-programming/?utm_source=chatgpt.com">Forbes — “Are Coders’ Jobs At Risk? AI’s Impact On The Future Of Programming”, Apr 2024.</a></li><br>
-                <li><a href="https://wsa-global.org/2024/07/17/hacking-the-gap-brazils-path-to-digital-inclusion/?utm_source=chatgpt.com">WSA‑Global — “Hacking the Gap – Brazil’s Path to Digital Inclusion”, Jul 2024.</a></li><br>
-                <li><a href="https://www.computer.org/csdl/magazine/cs/2024/04/10634318/1Zngc6HirtK?utm_source=chatgpt.com">IEEE Computer Society / Abreu et al. — “Bridging the Gender Gap in Computing: Insights From Latin America With a Focus on Brazil”, 2024.</a></li><br>
-                <li><a href="https://arxiv.org/html/2501.17278v1?utm_source=chatgpt.com">Documentação nacional — “Programming in Brazilian Higher Education and High School: A Systematic Literature Review”, Latini Gonçalves et al., 2025. </a></li><br>
-                <li><a href="https://www.software-developer-india.com/why-the-usa-is-the-largest-market-for-software-development/?utm_source=chatgpt.com">Software‑Developer‑India.com — “Why the USA is the largest market for software development”, Mar 2024.</a></li><br>
-            </ul>
-        </nav>
-        </details>
     </footer>
+    </div>
 </body>
 </html>

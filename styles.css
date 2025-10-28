@@ -1,5 +1,3 @@
-
-
 :root {
     --background-color: #02192c;
     --color: #179aa3;
@@ -32,6 +30,7 @@
 header {
     background-color: var(--main);
     border-bottom: var(--border-bottom);
+    margin: 29px;
 }
 
 main {
@@ -53,6 +52,7 @@ footer {
     border-radius: 20px;
     background-color: var(--background-color2);
     box-shadow: var(--box-shadow);
+    font-size: 17px;
     
 }
     
