@@ -7,7 +7,7 @@
     <title>CSS</title>
 </head>
 <body>
-    <header>
+    <header id="topo">
         <h1>Curso de CSS</h1>
         <p>Aprenda a estilizar suas páginas web com CSS3.</p>
         <div class="box">
@@ -16,6 +16,17 @@
                 <li><a href="curso.html">Cursos</a></li>
                 <li><a href="vejatambem.html">Veja também</a></li>
             </ul>
+            <details>
+                <summary>Menu</summary>
+                <li><a href="#aplicação">Formas de aplicar CSS</a></li>
+                <li><a href="#sintaxe">Sintaxe básica do CSS</a></li>
+                <li><a href="#propriedade">Principais propriedades</a></li>
+                <li><a href="#cascataheranca">Cascata e herança</a></li>
+                <li><a href="#praticas">Boas práticas</a></li>
+                <ul>
+
+                </ul>
+            </details>
             </div>
             </header>
 
@@ -39,7 +50,10 @@
                     </section>
                 </div>
 
-                <div class="box">
+                <div class="box" id="aplicação">
+                                   <button>
+                    <a  href="#topo" style="padding: 0px 25px 0px 25px; margin: 10px 10px; text-align: center; background-color: #02192C;">&#8593</a>
+                </button>
                     <section>
                         <h2>Formas de aplicar CSS</h2>
                         <ul>
@@ -67,6 +81,145 @@
 
                     </section>
                 </div>
-            </main>
+                <div class="box" id="sintaxe">
+                                   <button>
+                    <a  href="#topo" style="padding: 0px 25px 0px 25px; margin: 10px 10px; text-align: center; background-color: #02192C;">&#8593</a>
+                </button>
+                    <section>
+                        <h2>Sintaxe básica do CSS</h2>
+
+                        <p>
+                            seletor{  <br>
+                            propriedade: valor;<br>
+                        }
+                        </p>
+                        <p>Exemplo:</p>
+                        <p>
+                            h1 {<br>
+                                color: red;<br>
+                                font-size: 24px;<br>
+                            }
+                        </p>
+                        <p>Aqui, o seletor <strong>h1</strong>aplica  a cor vermelha e o tamanho de 24px a todos os títulos<strong>h1.</strong></p>
+                        <h2>Seletores principais</h2>
+                        <ul>
+                            <li><strong>seletor de tag:</strong> p { color: gray; }</li>
+                            <li><strong>seletor de classe:</strong> .destaque { background: yellow; }</li>
+                            <li><strong>seletor de ID:</strong> #título { font-size: 30px; }</li>
+                            <li><strong>seletor aninhado:</strong> div p { color: green; }</li>
+                            <li><strong>seletor universal:</strong> * { margin: 0; padding: 0; }</li>
+                        </ul>
+                    </section>
+                </div>
+                <div class="box" id="propriedade">
+                <button>
+                    <a  href="#topo" style="padding: 0px 25px 0px 25px; margin: 10px 10px; text-align: center; background-color: #02192C;">&#8593</a>
+                </button>
+                    <section class="art">
+                        <h2>Principais propriedades</h2>
+
+                        <table border="1">
+                            <tr>
+                                <th>Categoria</th>
+                                <th>Exemplos</th>
+                            </tr>
+                            <tr>
+                                <td>Texto</td>
+                                <td>color, font-size, font-family, text-align</td>
+                            </tr>
+                            <tr>
+                                <td>Espaçamento</td>
+                                <td>margin, padding, line-height</td>
+                            </tr>
+                            <tr>
+                                <td>Tamanho e forma</td>
+                                <td>width, height, border, border-radius</td>
+                            </tr>
+                            <tr>
+                                <td>Fundo</td>
+                                <td>backgound-color, backgroun-image, backgroun-size</td>
+                            </tr>
+                            <tr>
+                                <td>Layout</td>
+                                <td>display, position, flex, grid, float</td>
+                            </tr>
+                            <tr>
+                                <td>Efeitos</td>
+                                <td>box-shadow, opacity, transition, animation</td>
+                            </tr>
+                        </table>
+
+                    </section>
+                </div>
+                <div class="box" id="cascataheranca">
+                <button>
+                    <a  href="#topo" style="padding: 0px 25px 0px 25px; margin: 10px 10px; text-align: center; background-color: #02192C;">&#8593</a>
+                </button>
+                    <section>
+                        <h3>Cascata e herança</h3>
+                        <p>O nome <em>Cascading</em> vem do modo como o CSS decide qual estilo aplicar quando há conflitos.<br>
+                        As regras seguem uma ordem de propriedade:</p>
+                        <ol>
+                            <li>inline</li>
+                            <li>interno</li>
+                            <li>externo</li>
+                            <li>herança e especificidade</li>
+                        </ol>
+                        <p>Exemplo:</p>
+                        <p>
+                            &ltstyle&gt<br><br>
+                             p { color: blue; } /* externo */<br>
+                            &lt/style&gt<br><br>
+                             &ltp style="color: red;"&gtTexto vermelho&lt/p&gt /* inline */<br><br>
+                        </p>
+                        <p>O texto será vermelho, porque o estilo inline tem propriedade sobre o de classe.</p>
+                    </section>
+                </div>
+                <div class="box" id="praticas">
+                <button>
+                    <a  href="#topo" style="padding: 0px 25px 0px 25px; margin: 10px 10px; text-align: center; background-color: #02192C;">&#8593</a>
+                </button>
+                    <section>
+                        <h2>Boas práticas</h2>
+                        <ul>
+                            <li>Use classe para aplicar estilos em grupos de elemntos.</li>
+                            <li>Mantenha o CSS externo separado do HTML.</li>
+                            <li>Dê nomes claros e semânticos ás classes (<strong>.menu-princial, .botao-enviar</strong>).</li>
+                            <li>Evite repetir código: aproveite a herança e o reuso.</li>
+                            <li>Comente o código sempre que criar algo importante:</li>
+                        </ul>
+                        <p>/* seção principal do site */</p>
+                        <p>Exemplo:</p>
+                        <p>
+                            &lt!DOCTYPE html&gt<br>
+                            &lthtml lang="pt-BR"&gt<br>
+                            &lthead&gt<br>
+                            &ltmeta charset="UTF-8"&gt<br>
+                            &lttitlie&gtExemplo CSS&lt/title&gt<br>
+                            &ltlink rel="stylesheet" href="style.css"&gt<br>
+                            &lt/head&gt<br>
+                            &ltbody&gt<br>
+                            &lth1 class="titulo"&gtBem-vindo ao meu site!&lt/h1&gt<br>
+                            &ltp&gtEste é um exemplo com CSS externo.&lt/p&gt<br>
+                            &lt/body&gt<br>
+                            &lt/html&gt
+                        </p><br>
+            <p>/* style.css */<br><br>
+                body {  <br>
+                background-color: #f4f4f4;<br>
+                font-family: Arial, sans-serif;<br>
+                color: #333;<br>
+            }<br><br>
+                .titulo { <br>
+                color: #007bff;<br>
+                text-align: center;<br>
+            }
+            </p>
+        </section>
+    </div>
+</main>
+    <footer class="footer">
+        <p class="box">&copy; 2025 Manual do Programador Web. Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
