@@ -1,144 +1,225 @@
-:root {
-    --background-color: #02192c;
-    --color: #179aa3;
-    --border-bottom: 2px solid #179aa3;
-    --border-top: 2px solid #02192c;
-    --main: #02192c;
-    --border: solid #179aa3 2px;
-    --box-shadow: 3px 3px 5px #179aa3;
-    --background-color2: linear-gradient(to right,#02192c, #000000);
-    --color-a: #00d9ff;
-    --button: #00D9FF;
-    --color-button: #fff;
-    --button-hover: #0056b3;
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>CSS</title>
+</head>
+<body>
+    <header id="topo">
+        <h1>Curso de CSS</h1>
+        <p>Aprenda a estilizar suas páginas web com CSS3.</p>
+        <div class="box">
+            <ul class="busca">
+                <li><a href="index.html">Página inicial</a></li>
+                <li><a href="curso.html">Cursos</a></li>
+                <li><a href="vejatambem.html">Veja também</a></li>
+            </ul>
+            <details>
+                <summary>Menu</summary>
+                <li><a href="#aplicação">Formas de aplicar CSS</a></li><br><br>
+                <li><a href="#sintaxe">Sintaxe básica do CSS</a></li><br><br>
+                <li><a href="#propriedade">Principais propriedades</a></li><br><br>
+                <li><a href="#cascataheranca">Cascata e herança</a></li><br><br>
+                <li><a href="#praticas">Boas práticas</a></li><br><br>
+                <ul>
 
-* {
-    
-    background-color: var(--main);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: var(--color);
-    background: var(--background-color);
-    border-radius: 30px;
-}
+                </ul>
+            </details>
+            </div>
+            </header>
 
+            <main>
+                <div class="box">
+                    <details>
+                        <summary>Introdução</summary>
+                    <section>
+                        <h2>Introdução ao CSS (Cascading Style Sheets)</h2>
+                        <p>O <strong>CSS —</strong><em>Cascading Style Sheets</em> ou <em>Folhas de estilo em cascata —</em> é uma linguagem usada para <strong>definir o estilo visual e o layout</strong> de documentos HTML.</p><br>
+                        <p>Enquanto o <strong>HTML</strong> cria a estrutura da página, o <strong>CSS</strong> é responsável pela <strong>aparência:</strong> cores, fontes, espaçamentos, posicionamento e até animações.</p>
+                    </section>
+                    </details>
+                </div>
 
-    body {
-        margin: 2px;
-        }
-        
+                <div class="box">
+                    <section>
+                    <h2>Objetivo</h2>
+                        <p>Permitir que você separe o conteúdo (HTML) da apresentação (CSS).</p>
+                        <p>Isso facilita a manutenção e o design consistente em várias páginas web.</p>
+                    </section>
+                </div>
 
+                <div class="box" id="aplicação">
+                                   <button>
+                    <a  href="#topo" style="padding: 0px 25px 0px 25px; margin: 10px 10px; text-align: center; background-color: #02192C;">&#8593</a>
+                </button>
+                    <section>
+                        <h2>Formas de aplicar CSS</h2>
+                        <ul>
+                            <li>
+                                <strong>Inline (na própria tag HTML)</strong>
+                                <p>&ltp style="color: blue;"&gtTexto azul&lt/p&gt</p>
+                                <p>Útil apenas em testes rápidos!</p>
+                            </li><br>
 
+                            <li>
+                                <strong>Interno (dentro da tag <strong>&ltstyle&gt</strong> no HTML)</strong>
+                                <p>&ltstyle&gt<br><br>
+                                     p {<br>
+                                    color: blue;<br><br>
+                                &lt/style&gt</p>
+                                <p>Bom para páginas únicas!</p>
+                            </li><br>
 
-header {
-    background-color: var(--main);
-    border-bottom: var(--border-bottom);
-    margin: 29px;
-}
+                            <li>
+                                <strong>Externo (arquivo .css separado)</strong>
+                                <p>&ltlink rel="stylesheet" href="estilos.css"&gt</p>
+                                <p>É o método profissional. Mantém o código limpo e facilita atualizações!</p>
+                            </li><br>
+                        </ul>
 
-main {
-    background-color: var(--main);
-    border-radius: 50px;
-    margin: auto;
-}
+                    </section>
+                </div>
+                <div class="box" id="sintaxe">
+                                   <button>
+                    <a  href="#topo" style="padding: 0px 25px 0px 25px; margin: 10px 10px; text-align: center; background-color: #02192C;">&#8593</a>
+                </button>
+                    <section>
+                        <h2>Sintaxe básica do CSS</h2>
 
-footer {
-    border-top: var(--border-top);
-}
+                        <p>
+                            seletor{  <br>
+                            propriedade: valor;<br>
+                        }
+                        </p>
+                        <p>Exemplo:</p>
+                        <p>
+                            h1 {<br>
+                                color: red;<br>
+                                font-size: 24px;<br>
+                            }
+                        </p>
+                        <p>Aqui, o seletor <strong>h1</strong>aplica  a cor vermelha e o tamanho de 24px a todos os títulos<strong>h1.</strong></p>
+                        <h2>Seletores principais</h2>
+                        <ul>
+                            <li><strong>seletor de tag:</strong> p { color: gray; }</li>
+                            <li><strong>seletor de classe:</strong> .destaque { background: yellow; }</li>
+                            <li><strong>seletor de ID:</strong> #título { font-size: 30px; }</li>
+                            <li><strong>seletor aninhado:</strong> div p { color: green; }</li>
+                            <li><strong>seletor universal:</strong> * { margin: 0; padding: 0; }</li>
+                        </ul>
+                    </section>
+                </div>
+                <div class="box" id="propriedade">
+                <button>
+                    <a  href="#topo" style="padding: 0px 25px 0px 25px; margin: 10px 10px; text-align: center; background-color: #02192C;">&#8593</a>
+                </button>
+                    <section class="art">
+                        <h2>Principais propriedades</h2>
 
+                        <table border="1">
+                            <tr>
+                                <th>Categoria</th>
+                                <th>Exemplos</th>
+                            </tr>
+                            <tr>
+                                <td>Texto</td>
+                                <td>color, font-size, font-family, text-align</td>
+                            </tr>
+                            <tr>
+                                <td>Espaçamento</td>
+                                <td>margin, padding, line-height</td>
+                            </tr>
+                            <tr>
+                                <td>Tamanho e forma</td>
+                                <td>width, height, border, border-radius</td>
+                            </tr>
+                            <tr>
+                                <td>Fundo</td>
+                                <td>backgound-color, backgroun-image, backgroun-size</td>
+                            </tr>
+                            <tr>
+                                <td>Layout</td>
+                                <td>display, position, flex, grid, float</td>
+                            </tr>
+                            <tr>
+                                <td>Efeitos</td>
+                                <td>box-shadow, opacity, transition, animation</td>
+                            </tr>
+                        </table>
 
-
-
-
-
-a {
-    color: var(--color);
-    border-radius: 30px;
-    text-decoration: none;
-}
-
-.table {
-    text-align: center;
-    padding: 10px;
-    box-shadow: var(--box-shadow);
-    background-color: var(--background-color2);
-    border-radius: 20px;
-    margin: 34px;
-    border: var(--border);
-
-}
-a:hover {
-    color: var(--color-a)
-}
-
-.busca {
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-    display: flex;
-    
-}
-
-p {
-    text-align: justify;
-    color: var(--color);
-}
-
-.p {
-    border-top: var(--border-bottom) ;
-    padding: 9px;
-}
-
-p:hover {
-    color: var(--color-a);
-}
-
-.line {
-    border-top: var(--border);
-}
-
-.art {
-    text-align: center;
-}
-
-li:hover {
-    color: var(--color-a);
-}
-
-
-    .box {
-        border: var(--border);
-        padding: 10px;
-        margin: 34px;
-        border-radius: 20px;
-        background-color: var(--background-color2);
-        box-shadow: var(--box-shadow);
-        font-size: 17px;
-        
-    }
-
-    .button {
-        background-color: var(--button);
-        color: var(--color-button);
-        text-decoration: nome;
-        padding: 10px 20px ;
-        border-radius: 6px;
-        transition: 0.3s;
-    }
-
-    .button:hover {
-        background-color: var(--button-hover);
-    }
-
-.css {
-    border: var(--border);
-    padding: 10px 0px 10px 0px;
-    margin: 20px;
-    border-radius: 20px;
-    background-color: var(--background-color2);
-    box-shadow: var(--box-shadow);
-    height: 300px;
-
-}
-
-
+                    </section>
+                </div>
+                <div class="box" id="cascataheranca">
+                <button>
+                    <a  href="#topo" style="padding: 0px 25px 0px 25px; margin: 10px 10px; text-align: center; background-color: #02192C;">&#8593</a>
+                </button>
+                    <section>
+                        <h3>Cascata e herança</h3>
+                        <p>O nome <em>Cascading</em> vem do modo como o CSS decide qual estilo aplicar quando há conflitos.<br>
+                        As regras seguem uma ordem de propriedade:</p>
+                        <ol>
+                            <li>inline</li>
+                            <li>interno</li>
+                            <li>externo</li>
+                            <li>herança e especificidade</li>
+                        </ol>
+                        <p>Exemplo:</p>
+                        <p>
+                            &ltstyle&gt<br><br>
+                             p { color: blue; } /* externo */<br>
+                            &lt/style&gt<br><br>
+                             &ltp style="color: red;"&gtTexto vermelho&lt/p&gt /* inline */<br><br>
+                        </p>
+                        <p>O texto será vermelho, porque o estilo inline tem propriedade sobre o de classe.</p>
+                    </section>
+                </div>
+                <div class="box" id="praticas">
+                <button>
+                    <a  href="#topo" style="padding: 0px 25px 0px 25px; margin: 10px 10px; text-align: center; background-color: #02192C;">&#8593</a>
+                </button>
+                    <section>
+                        <h2>Boas práticas</h2>
+                        <ul>
+                            <li>Use classe para aplicar estilos em grupos de elemntos.</li>
+                            <li>Mantenha o CSS externo separado do HTML.</li>
+                            <li>Dê nomes claros e semânticos ás classes (<strong>.menu-princial, .botao-enviar</strong>).</li>
+                            <li>Evite repetir código: aproveite a herança e o reuso.</li>
+                            <li>Comente o código sempre que criar algo importante:</li>
+                        </ul>
+                        <p>/* seção principal do site */</p>
+                        <p>Exemplo:</p>
+                        <p>
+                            &lt!DOCTYPE html&gt<br>
+                            &lthtml lang="pt-BR"&gt<br>
+                            &lthead&gt<br>
+                            &ltmeta charset="UTF-8"&gt<br>
+                            &lttitlie&gtExemplo CSS&lt/title&gt<br>
+                            &ltlink rel="stylesheet" href="style.css"&gt<br>
+                            &lt/head&gt<br>
+                            &ltbody&gt<br>
+                            &lth1 class="titulo"&gtBem-vindo ao meu site!&lt/h1&gt<br>
+                            &ltp&gtEste é um exemplo com CSS externo.&lt/p&gt<br>
+                            &lt/body&gt<br>
+                            &lt/html&gt
+                        </p><br>
+            <p>/* style.css */<br><br>
+                body {  <br>
+                background-color: #f4f4f4;<br>
+                font-family: Arial, sans-serif;<br>
+                color: #333;<br>
+            }<br><br>
+                .titulo { <br>
+                color: #007bff;<br>
+                text-align: center;<br>
+            }
+            </p>
+        </section>
+    </div>
+</main>
+    <footer class="footer">
+        <p class="box">&copy; 2025 Manual do Programador Web. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
