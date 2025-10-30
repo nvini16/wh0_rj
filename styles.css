@@ -8,6 +8,9 @@
     --box-shadow: 3px 3px 5px #179aa3;
     --background-color2: linear-gradient(to right,#02192c, #000000);
     --color-a: #00d9ff;
+    --button: #00D9FF;
+    --color-button: #fff;
+    --button-hover: #0056b3;
 }
 
 * {
@@ -45,17 +48,7 @@ footer {
 
 
 
-.box {
-    border: var(--border);
-    padding: 10px;
-    margin: 34px;
-    border-radius: 20px;
-    background-color: var(--background-color2);
-    box-shadow: var(--box-shadow);
-    font-size: 17px;
-    
-}
-    
+
 
 
 a {
@@ -112,3 +105,38 @@ li:hover {
     color: var(--color-a);
 }
 
+
+    .box {
+        border: var(--border);
+        padding: 10px;
+        margin: 34px;
+        border-radius: 20px;
+        background-color: var(--background-color2);
+        box-shadow: var(--box-shadow);
+        font-size: 17px;
+        
+    }
+
+    .button {
+        background-color: var(--button);
+        color: var(--color-button);
+        text-decoration: nome;
+        padding: 10px 20px ;
+        border-radius: 6px;
+        transition: 0.3s;
+    }
+
+    .button:hover {
+        background-color: var(--button-hover);
+    }
+
+.css {
+    border: var(--border);
+    padding: 10px 0px 10px 0px;
+    margin: 20px;
+    border-radius: 20px;
+    background-color: var(--background-color2);
+    box-shadow: var(--box-shadow);
+    height: 300px;
+
+}
