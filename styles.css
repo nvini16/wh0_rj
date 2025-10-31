@@ -134,7 +134,6 @@ li:hover {
     .center {
         text-align: center;
         border: var(--border);
-
         margin: 34px;
         border-radius: 20px;
         background-color: var(--background-color2);
