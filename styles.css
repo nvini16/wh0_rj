@@ -20,11 +20,12 @@
     color: var(--color);
     background: var(--background-color);
     border-radius: 30px;
+    max-width: 100%;
 }
 
 
     body {
-        margin: 2px;
+        margin: 0;
         }
         
 
@@ -131,10 +132,11 @@ li:hover {
         
     }
 
-    .center {
+    iframe {
         text-align: center;
         border: var(--border);
-        margin: 34px;
+        max-width: 100%;
+ 
         border-radius: 30px;
         background-color: var(--background-color2);
         box-shadow: var(--box-shadow);
